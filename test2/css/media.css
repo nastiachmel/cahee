@@ -109,7 +109,7 @@
   right: 0;
       /* left: 0; */
 
-  background-color: rgba(58, 52, 52, 0.931);
+  background-color: rgb(58, 52, 52);
   z-index: 1000;
   height: 100%;
   width: 100%;
