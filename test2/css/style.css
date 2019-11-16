@@ -135,12 +135,14 @@
 
 .wrap-blog{
   padding: 0 15px;
+  background: #b07cf7;
+  padding-bottom: 20px;
 }
 .title-blog{
   font-size: 90px; 
   text-align: center; 
   font-weight: bold;
-  margin-top: 70px;
+  padding-top: 70px;
   margin-bottom: 45px;
   color: white;
   font-family: 'Raleway', sans-serif;
