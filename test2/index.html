@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/media.css">
   <link rel="stylesheet" href="./css/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> -->
-  <script src="./js/main.js"></script>
+  <link rel="stylesheet" href="./css/animate.min.css">
+
   <title>Document</title>
+
 </head>
 
 <body>
@@ -35,48 +35,40 @@
 
               <div class="navigation">
                 <ul class="navigation__menu ">
-                  <a href="" class="navigation__link-close">&#10008;</a>
+                  <a  class="navigation__link-close">&#10008;</a>
                   <li class="navigation__item">
-                    <a class="navigation__link " href=""> HOME </a>
+                    <a class="navigation__link " href="#home" onclick="active()"> HOME </a>
                   </li>
                   <li class="navigation__item">
-                    <a class="navigation__link" href=""> ABOUT </a>
+                    <a class="navigation__link" href="#about" onclick="active('.about__title')"> ABOUT </a>
                   </li>
                   <li class="navigation__item">
-                    <a class="navigation__link" href=""> SERVICES </a>
+                    <a class="navigation__link" href="#blog" onclick="active('.title-blog')"> BLOG </a>
                   </li>
                   <li class="navigation__item">
-                    <a class="navigation__link" href=""> GALLERY </a>
-                  </li>
-                  <li class="navigation__item">
-
-                    <a class="navigation__link" href=""> BLOG </a>
-                  </li>
-                  <li class="navigation__item">
-                    <a class="navigation__link navigation__link--fix" href=""> CONTACT </a>
+                    <a class="navigation__link navigation__link--fix" href="#contact" onclick="active('.title-name')"> CONTACT </a>
                   </li>
                 </ul>
-
               </div>
             </div>
           </div>
         </header>
         <div class="text">
-          <span class="text__title">Fresh Life</span>
+          <span class="text__title  ">Fresh Life</span>
           <br>
           <span class="text__content">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco.</span>
           <br>
-          <button class="button">GET FREE NOW</button>
+          <button class="button ">GET FREE NOW</button>
         </div>
       </div>
     </div>
-    <div class="footer">
+    <div class="about">
       <div class="mainer mainer--fix">
-        <img class="img" src="./img/footer.png" alt="" srcset="./img/main_bg@2.png 2x, ./img/main_bg@3.png 3x">
-        <div class="footer__text">
-          <span class="footer__title">About Us</span> <br>
-          <span class="footer__content">
+        <img class="img" src="./img/footer.png" alt="about">
+        <div class="about__text">
+          <a name="about" class="about__title js-about-title">About Us</a> <br>
+          <span class="about__content">
             Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
             ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
             <br> <br> Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -88,74 +80,32 @@
     <!--  -->
 
     <div class="wrap-blog">
-      <div class="title-blog">
+      <a name="blog" class="title-blog">
         Blog
-      </div>
-      <div class="text-blog">
+      </a>
+      <div class="text-blog ">
         Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat.
         Duis aute irure dolor in reprehenderit in voluptate velit.
       </div>
-
-      <ul class="mainer-blog">
-        <li class="article">
-          <div class="data">
-            <span>20</span>
-            <span class="month">NOV</span>
-          </div>
-
-          <div class="title-article">
-            Green Smoothies: Too Much of a Good Thing?
-            <br>
-            <span class="author-blog">By Auskteez - 2 hours ago</span>
-          </div>
-          <!--  -->
-        </li>
-        <li class="article">
-          <div class="data">
-            <span>14</span>
-            <span class="month">NOV</span>
-          </div>
-
-          <div class="title-article">
-            Growing Food and a “Thirst” for Innovation
-            <br>
-            <span class="author-blog"> By Auskteez - 3 hours ago</span>
-          </div>
-
-        </li>
-        <li class="article ">
-          <div class="data">
-            <span>10</span>
-            <span class="month">NOV</span>
-          </div>
-
-          <div class="title-article">
-            Pesticides & Food: What You Need to Know
-            <br>
-            <span class="author-blog">By Auskteez - 6 hours ago</span>
-          </div>
-        </li>
-      </ul>
-      <button class="button-blog">VIEW MORE </button>
+      <ul class="mainer-blog js-mainer-blog"></ul>
+      <button class="button-blog " onclick="more()">VIEW MORE </button>
     </div>
-    
-
-
     <!--  -->
     <div class="bg-contact">
       <header class="header-contact">
-        <span class="title-name">Contact</span>
+        <a name="contact" class="title-name">Contact</a>
         <br>
         <span class="title-text">For new projects, ideas, business or anything
           you'd like to discuss, contact with me!</span>
       </header>
-      <main class="main-contact">
+      <div class="main-contact">
         <form action="#" class="form">
           <input class="form__element" type="text" placeholder="Your name...">
           <input class="form__element" type="email" placeholder="Your email...">
           <input class="form__element" type="text" placeholder="Your phone number..." data-mask="+000 00 000 0000">
           <textarea class="form__element textarea" placeholder="Your messge..."></textarea>
+          <button >Send</button>
         </form>
         <div class="info-element">
           <div class="content_title">ADDRESS</div>
@@ -167,7 +117,7 @@
           <div class="content_title">PHONE</div>
           <div class="content_info_example">+012 345 6789</div>
         </div>
-      </main>
+      </div>
 
       <footer class="footer-contact">
         <div class="label">© 2015 Company. All right reserved.</div>
@@ -181,6 +131,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="./js/jquery.mask.min.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
