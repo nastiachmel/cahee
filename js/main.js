@@ -1,5 +1,6 @@
     $('.menu__icon').on('click', function() {
       $('.menu').addClass('menu_state_open');
+      $('.menu__icon').css("display",'none')
     });
     
 function active( link) {
